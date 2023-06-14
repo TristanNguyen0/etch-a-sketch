@@ -21,6 +21,27 @@ function createGrid(width, height){
 createGrid(16,16);
 
 
-const squares = document.querySelectorAll('.row-element');
 
+function clearGrid(){
+    const squares = document.querySelectorAll('.row-element');
+    squares.forEach((square) => square.remove());
+    const rows = document.querySelectorAll('.row');
+    rows.forEach((row) => row.remove());
+}
+
+
+function setGridSize(){
+    let width = prompt("Enter width:","16");
+    let height = prompt("Enter height:","16");
+    clearGrid();
+    createGrid(parseInt(width), parseInt(height));
+
+    //update hover event listener for new grid
+    //hover event listener for all row-element styled div's 
+const squares = document.querySelectorAll('.row-element');
+squares.forEach((square)=>square.addEventListener("mouseover",()=>{square.style.cssText = "background-color: black;";}));
+}
+
+//hover event listener for all row-element styled div's 
+const squares = document.querySelectorAll('.row-element');
 squares.forEach((square)=>square.addEventListener("mouseover",()=>{square.style.cssText = "background-color: black;";}));
