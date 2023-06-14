@@ -19,3 +19,8 @@ function createGrid(width, height){
 }
 
 createGrid(16,16);
+
+
+const squares = document.querySelectorAll('.row-element');
+
+squares.forEach((square)=>square.addEventListener("mouseover",()=>{square.style.cssText = "background-color: black;";}));
