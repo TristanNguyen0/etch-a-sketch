@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 860px;
+    width: 860px;
+    border: 2px solid black;
+}
+
+.row{
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.row-element{
+    display: flex;
+    flex: 1 0 auto;
+}
